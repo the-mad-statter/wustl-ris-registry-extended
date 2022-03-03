@@ -11,7 +11,7 @@ This docker file extends [gcr.io/ris-registry-shared/rstudio:4.1.2](https://cons
 Add the following to your `~/.Rprofile` to set your library location to use storage:
 
 ```
-vals <- paste('/storage1/fs1/<your_wustl_key>/Active/R_libraries/', paste(R.version$major, R.version$minor, sep="."), sep="")
+vals <- paste('/storage1/fs1/<your_volume_name>/Active/R_libraries/', paste(R.version$major, R.version$minor, sep="."), sep="")
 for(devlib in vals) {
     if (!file.exists(devlib))
     dir.create(devlib)
@@ -34,8 +34,10 @@ export LD_LIBRARY_PATH=/usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/server:$LD_LIB
 ```
 export PASSWORD=<your_novnc_password>
 export LSF_DOCKER_PORTS='8080:8080'
-export LSF_DOCKER_VOLUMES="/storage1/fs1/<your_wustl_key>/Active:/storage1/fs1/<your_wustl_key>/Active"
+export LSF_DOCKER_VOLUMES="/storage1/fs1/<your_volume_name>/Active:/storage1/fs1/<your_volume_name>/Active"
 bsub -Is -R 'select[port8080=1]' -q general-interactive -a 'docker(<your_dockerhub_username/<image_name>:<tag>)' supervisord -c /app/supervisord.conf
 ```
 
 See also an [example_submission_script.sh](example_submission_script.sh).
+
+You can then access the instance via `https://compute1-exec-<node>.compute.ris.wustl.edu:8080/vnc.html`, where <node> will be reported in your ssh session.

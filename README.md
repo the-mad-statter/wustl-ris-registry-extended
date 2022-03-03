@@ -23,7 +23,7 @@ This repository contains Dockerfiles for different Docker containers for use on 
 
 ## Run the Container on the Compute Platform
 
-1. ssh into the compute platform
+1. ssh <your_wustl_key>@compute1-client-1.ris.wustl.edu
 2. submit a job
 
 ## About
