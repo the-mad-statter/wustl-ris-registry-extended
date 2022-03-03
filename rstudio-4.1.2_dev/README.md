@@ -2,7 +2,7 @@
 
 ## Overview
 
-This docker file extends [gcr.io/ris-registry-shared/rstudio:4.1.2](gcr.io/ris-registry-shared/rstudio:4.1.2) to include a few developmental libraries.
+This docker file extends [gcr.io/ris-registry-shared/rstudio:4.1.2](https://console.cloud.google.com/gcr/images/ris-registry-shared/GLOBAL/rstudio@sha256:839b8bcb94f4129d7f82223b5976d017ae014a906f312ad144d1a711e2631eef/details?tag=4.1.2) to include a few developmental libraries.
 
 ## Prerequisites
 
