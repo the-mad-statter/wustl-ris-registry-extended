@@ -1,4 +1,4 @@
-# wustl-ris-registry-extended <img src="img/ris_logo.png" align="right" width="125px" />
+# wustl-ris-registry-extended <img src="img/ris_logo.jpg" align="right" width="125px" />
 
 [![Under Development](https://img.shields.io/badge/status-under%20development-red.svg)](https://github.com/the-mad-statter/wustl-ris-registry-extended)
 [![Last Commit](https://img.shields.io/github/last-commit/the-mad-statter/wustl-ris-registry-extended.svg)](https://github.com/the-mad-statter/wustl-ris-registry-extended/commits/master)
