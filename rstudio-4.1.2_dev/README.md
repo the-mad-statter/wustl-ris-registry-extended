@@ -35,7 +35,7 @@ export LD_LIBRARY_PATH=/usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/server:$LD_LIB
 export PASSWORD=<your_novnc_password>
 export LSF_DOCKER_PORTS='8080:8080'
 export LSF_DOCKER_VOLUMES="/storage1/fs1/<your_volume_name>/Active:/storage1/fs1/<your_volume_name>/Active"
-bsub -Is -R 'select[port8080=1]' -q general-interactive -a 'docker(<your_dockerhub_username/<image_name>:<tag>)' supervisord -c /app/supervisord.conf
+bsub -Is -R 'select[port8080=1]' -q general-interactive -a 'docker(<your_dockerhub_username>/<image_name>:<tag>)' supervisord -c /app/supervisord.conf
 ```
 
 See also an [example_submission_script.sh](example_submission_script.sh).
