@@ -40,4 +40,4 @@ bsub -Is -R 'select[port8080=1]' -q general-interactive -a 'docker(<your_dockerh
 
 See also an [example_submission_script.sh](example_submission_script.sh).
 
-You can then access the instance via `https://compute1-exec-<node>.compute.ris.wustl.edu:8080/vnc.html`, where <node> will be reported in your ssh session.
+You can then access the instance via `https://compute1-exec-<node>.compute.ris.wustl.edu:8080/vnc.html`, where `node` will be reported in your ssh session.
