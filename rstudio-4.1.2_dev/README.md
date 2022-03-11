@@ -4,6 +4,20 @@
 
 This docker file extends [gcr.io/ris-registry-shared/rstudio:4.1.2](https://console.cloud.google.com/gcr/images/ris-registry-shared/GLOBAL/rstudio@sha256:839b8bcb94f4129d7f82223b5976d017ae014a906f312ad144d1a711e2631eef/details?tag=4.1.2) to include a few developmental libraries.
 
+## Build
+
+The docker file can be built with:
+
+```
+docker build -t <your_dockerhub_username>/<image_name>:<tag> .
+```
+
+And hosted on Docker Hub with
+
+```
+docker push <your_dockerhub_username>/<image_name>:<tag>
+```
+
 ## Prerequisites
 
 ### .Rprofile
@@ -19,14 +33,6 @@ x <- .libPaths()
 x <- .libPaths(c(devlib, x))
 }
 rm(x, vals)
-```
-
-### rJava
-
-If you try to install `rJava`, it may fail because .so files have been moved in OpenJDK11. Per this [StackOverflow](https://stackoverflow.com/questions/58607146/unable-to-run-a-simple-jni-program-error-message-when-installing-rjava-on-r-3) add the following to your `~/.bashrc`:
-
-```
-export LD_LIBRARY_PATH=/usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/server:$LD_LIBRARY_PATH
 ```
 
 ## Example Job Submission
